@@ -68,6 +68,10 @@ button {
     animation: bounce 2s;
 }
 
+.bouncebox {
+    height: 120px;
+}
+
 @keyframes bounce {
     0%,
     25%,
