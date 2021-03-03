@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", init);
 async function init() {
     console.log("DOM Loaded");
 
-    let response = await fetch("imagefiles/converse-01.svg");
+    let response = await fetch("imagefiles/converse3-01.svg");
     let mySVGdata = await response.text();
     document.querySelector("#conversesvg").innerHTML = mySVGdata;
 
@@ -31,6 +31,8 @@ function manipulateSVG() {
     document.querySelector("#bottommiddle").classList.add("g_to_interact_with");
     document.querySelector("#bottomtop").classList.add("g_to_interact_with");
     document.querySelector("#shoebody").classList.add("g_to_interact_with");
+    document.querySelector("#shoetipbottom").classList.add("g_to_interact_with");
+    document.querySelector("#shoesnip").classList.add("g_to_interact_with");
 
     let gSpots = document.querySelectorAll(".g_to_interact_with");
 
