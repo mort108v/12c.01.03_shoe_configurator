@@ -1,7 +1,7 @@
 "use strict"
 
 let elementToPaint;
-
+let gSpots;
 
 
 document.addEventListener("DOMContentLoaded", init);
@@ -34,7 +34,7 @@ function manipulateSVG() {
     document.querySelector("#shoetipbottom").classList.add("g_to_interact_with");
     document.querySelector("#shoesnip").classList.add("g_to_interact_with");
 
-    let gSpots = document.querySelectorAll(".g_to_interact_with");
+    gSpots = document.querySelectorAll(".g_to_interact_with");
 
     gSpots.forEach(gSpot => {
         console.log(gSpot);
@@ -50,6 +50,8 @@ function manipulateSVG() {
 
     colorButtons.forEach(colorButton => {
         console.log(colorButton);
+
+        // gspots.classList.remove("animatefill");
 
         colorButton.addEventListener("mouseover", mouseoverColorButton);
         colorButton.addEventListener("mouseout", mouseoutColorButton);
@@ -75,10 +77,12 @@ function clickColorButton() {
     console.log("clickColorButton", this);
     // getAttribute("fill")
     // elementToPaint.classlist.add("bounce");
+
     const color = this.getAttribute("fill");
-    // let tempcolor = document.querySelector("#tempcolor");
-    // tempcolor.style.fill = color;
-    // elementToPaint.classList.add("animatefill");
+
+    const tempcolor = document.querySelector("#tempcolor");
+    tempcolor.style.fill = color;
+    elementToPaint.classList.add("animatefill");
 
     elementToPaint.style.fill = color;
 }
@@ -93,19 +97,17 @@ function mouseoutG() {
     console.log("mouseoutG");
 
     this.classList.remove("boxShadowThis");
-
 }
 
 function clickG() {
     console.log("clickG");
 
     elementToPaint = this;
-    elementToPaint.style.fill = "rgba(80, 163, 230, 0.1)";
+    elementToPaint.style.fill = "rgba(80, 163, 230, 0.3)";
 }
 
 function treefunc() {
     console.log("Tree animation");
-
 }
 
 function carfunc() {
