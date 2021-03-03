@@ -74,6 +74,7 @@ function mouseoutColorButton() {
 function clickColorButton() {
     console.log("clickColorButton", this);
     // getAttribute("fill")
+    elementToPaint.classlist.add("bounce");
     const color = this.getAttribute("fill");
     elementToPaint.style.fill = color;
 }

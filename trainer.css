@@ -64,8 +64,28 @@ button {
     pointer-events: none;
 }
 
+.bounce {
+    animation: bounce 2s;
+}
+
+@keyframes bounce {
+    0%,
+    25%,
+    50%,
+    75%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-12px);
+    }
+}
+
 .boxShadowThis {
-    fill: rgba(229, 235, 136, 0.192);
+    fill: rgba(229, 235, 136, 0.392);
     -webkit-filter: drop-shadow(0 1px 10px rgba(113, 158, 206, 0.8));
     filter: url(#drop-shadow);
 }
