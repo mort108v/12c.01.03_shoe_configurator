@@ -101,7 +101,7 @@ function mouseoutG() {
 
 function clickG() {
     console.log("clickG");
-
+    this.classList.remove("animatefill");
     elementToPaint = this;
     elementToPaint.style.fill = "rgba(80, 163, 230, 0.3)";
 }
