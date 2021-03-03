@@ -94,6 +94,22 @@ button {
     filter: url(#drop-shadow);
 }
 
+.animatefill {
+    fill: transparent;
+    animation-name: animatefill;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animatefill {
+    0% {
+        fill: 0%;
+    }
+    100% {
+        fill: url(#tempcolor);
+    }
+}
+
 
 /* .houseouter {
     stroke: rgba(95, 19, 19);

@@ -76,6 +76,10 @@ function clickColorButton() {
     // getAttribute("fill")
     // elementToPaint.classlist.add("bounce");
     const color = this.getAttribute("fill");
+    // let tempcolor = document.querySelector("#tempcolor");
+    // tempcolor.style.fill = color;
+    // elementToPaint.classList.add("animatefill");
+
     elementToPaint.style.fill = color;
 }
 
